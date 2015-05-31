@@ -1,0 +1,82 @@
+Cyber Summer Camp 2.0!!!
+============
+
+#Summary
+Cyber Summer Camp 2.0's (CSC2) objective is to prepare students to remotely defend a website that is under attack. The camp begins with the kids learning computer virtualization and basic Linux commands. Students will then learn how to remotely administer a computer system, while provideing user services and maintaining security. The camp ends with a capstone “live fire” event. The scenerio is that the students are in charge of business website (Amazon, Facebook, Google, etc.) which they  maintain via SSH, while several members of the community try to take over the student’s web page. 
+
+
+#Audience
+CSC2 is great prep for anyone looking to become a computer/IT technician and/or looking into a college degree of Computer Science or Computer Engineering.
+
+#Objective
+CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New York and Mohawk Valley Regions of NY. The camps are geared for local Middle and High School students. The camps provide hands on learning in the areas of cyber defense, programming, hardware, software, sensors integration, computer administration, networking, critical thinking, applied learning, and engineering methods and reasoning.
+
+
+#Goal
+- Have Fun Learning
+- Be Safe
+- Get Students Interested in STEM
+
+#Basic Rules
+- Be Respectful,
+- Don't be a Distraction to Others' Learning.
+- No physically touching others' computer without their permission (remotely touching them will be encouraged at times).
+
+#Outline
+
+##Monday Morning
+- Welcome and Intro
+- STEM careers
+- Intro to Virtual Machines
+  - Setup  VBox
+  - Install Ubuntu
+
+
+##Monday Afternoon
+###Intro to Linux
+- What happens when you press Power -  Boot Process
+- Shell / Terminal / CLI
+- Basic Commands
+
+##Tuesday Morning
+### Remote Administration
+- FTP, Telnet, RLogin/Rsh
+- SSH (basics)
+- Users/Groups
+- Passwords
+- Permissions
+
+##Tuesday Afternoon
+###Networking
+- ifconfig
+- IP addresses, ports
+- SSH (keys, X-forward)
+- Wireshark
+
+Mini-Competition: SSH into other people's machines and try to shutdown their machine or whatever you want.
+
+##Wednesday Morning
+###Firewalls / Mini-scripting
+- UFW
+- Scripting
+- cron
+- alias
+- chattr
+
+##Wednesday Afternoon
+###SSH config
+- etc/ssh/sshd\_config
+- Banner
+- Logging Fails
+
+Mini-Competition: SSH into others' box knowing the username/password, keeping others out with Firewalls/sshd config only.
+##Thursday Morning
+###Apache Config
+- Configuring Apache
+- Intro to HTML / Website making
+- What they want to learn
+
+##Thursday Afternoon
+Dry Run of Competition. Student Groups vs other Student Groups.
+##Friday
+Red vs Blue Competition. 

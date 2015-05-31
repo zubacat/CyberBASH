@@ -1,0 +1,20 @@
+# Tuesday Afternoon
+## Networking
+- ifconfig
+- https://www.youtube.com/watch?v=kUEIRcvOiuo
+- Explain IP addresses, ports
+- Some common port numbering (at least for SSH and http).
+- Show open ports, apps running / listening, netstat or lsof.
+- Wireshark
+- I am debating the usefulness of wireshark -  kids didn't use in '14.
+
+## More SSH
+- Keys, add on partners machine.
+- X-forwarding (with compression).
+
+
+## Hopefully Time for 1st Mini-Competition
+- Use provided VM.
+- Students have to delete or change user's passwordsi/keys to score points.
+- After 15-20 mins others can try to login and shutdown or do whatever to VM.
+- Try to write on VM score engine to check status of user.

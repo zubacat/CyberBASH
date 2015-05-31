@@ -1,0 +1,17 @@
+# Wednesday Afternoon
+
+##SSH server config
+
+- /etc/ssh/sshd\_config
+- Set the Banner
+- Really try to explain what a banner is and why it is used.
+
+## SSH Audit
+- Show where logs exsist
+- Show login fails
+
+## Mini-Comp 2
+- VM where students can't change password.
+- Have to prevent login by firewall. 
+- Use the score server on SSH banner only.
+- Make sure the kids understand how to edit banner. 

@@ -1,0 +1,21 @@
+# Thursday Morning
+
+## Website / Apache config
+- Not actual apache config
+- Show them how score server reads website for names and gives points.
+
+- May need to:
+- Config file for root of index.html
+- /etc/apache2/sites-available/000-default.conf
+- Change DocumentRoot to /var/www
+- May still work with /var/www/html
+- IDK need to test if it matters or even right config file
+
+##Intro to HTML
+- Let them design a HTML webpage
+- Seem to have a lot of fun doing this
+
+- Have a vote on who has the best webpage ( bring up on projector)
+
+## Whatever they have questions on.
+- See if they have any thing they want to learn.

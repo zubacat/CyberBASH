@@ -1,0 +1,33 @@
+#Monday Morning
+## Introductions
+### Teacher, Staff, and Intern Introductions
+
+### Student Intros
+- Name
+- School
+- Grade
+- What You Want to Learn at CSC 2.0
+ 
+### Ice Breaker
+- GI provided
+
+## STEM careers / video
+- Helen Rico
+
+## Quick and Mini Review of CSC 1.0
+- Like 5-10 mins Quick
+##Introduction to Virtualization
+Should be a slide show on it in folder.
+
+- What it is.
+- Why its used.
+- Pros and Cons.
+
+## Hands On
+- Virtualbox install.
+- Install Linux from iso on host machine.
+- Perferable Ubuntu - rest of week geared to Ubuntu.
+- Guest Additions 'CD' to allow full screen.
+- Bridged Network to wifi or ethernet adapter.
+- May have to unmount or 'eject' the iso from 'D:\' drive to not boot iso again.
+- Remember to CLONE right after a successful fresh install!

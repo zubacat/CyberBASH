@@ -1,0 +1,14 @@
+# Wednesday Morning
+
+## Firewalls
+- Basic explanation of what a firewall is.
+- Probably a good video somewhere
+- UFW
+- Walk though of setting up UFW (block ip's, ports).
+
+## Misc
+- Might be a good time for misc commands and features.
+- alias
+- chattr
+- cron
+- maybe some scripting
