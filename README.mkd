@@ -26,17 +26,41 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 
 ##Monday Morning
 - Welcome and Intro
+  - Teacher, Staff, and Intern
+  - Student
+    - Name
+    - Grade
+    - School
+    - What you want to Learn at CSC 2.0
+- [Pre Class Survey](https://docs.google.com/forms/d/1VtP-kvhPFHNdI_1Cq4iaL6KvBECw6ELLojxanqi_wFA/viewform)
 - STEM careers
+- Ice Breaker
 - Intro to Virtual Machines
+  - [Why Virtualize?](https://www.youtube.com/watch?v=N4buO79A22w)
   - Setup  VBox
   - Install Ubuntu
+  - Guest Addtitions 'CD' to allow full screen
+  - "Bridged" Network to wifi or wired
+  - unmount/eject iso from 'D:\'
+  - CLONE after a sucessful install!
 
 
 ##Monday Afternoon
 ###Intro to Linux
-- What happens when you press Power -  Boot Process
-- Shell / Terminal / CLI
-- Basic Commands
+- What happens when you press Power -  [Boot Process](https://www.youtube.com/watch?v=ZtVpz5VWjAs)
+- Shell / Terminal / CLI / [BASH](https://www.youtube.com/watch?v=NjSgH-hcsbg)
+- Explain layout of Terminal 
+- Basic Commands - Each Group choose 2 commands to research.
+  - who
+  - ls
+  - cd
+  - whoami
+  - pwd
+  - cat
+  - kill
+  - ps
+  - cp
+  - rm
 
 ##Tuesday Morning
 ### Remote Administration
