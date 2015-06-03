@@ -60,15 +60,33 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
   - kill
   - ps
   - cp
+  - mv
   - rm
+  - grep
+  - man
+
+- Take a Break
+- [Linux File System](https://www.youtube.com/watch?v=2qQTXp4rBEE)
+- [Sudo] (https://www.youtube.com/watch?v=imnEUvvDxc4)
 
 ##Tuesday Morning
-### Remote Administration
-- FTP, Telnet, RLogin/Rsh
-- SSH (basics)
+### Administration
 - Users/Groups
+  - adduser
+  - deluser
+  - Where are users listed?
+  - lastlog
 - Passwords
 - Permissions
+
+###Remote Administration
+###Insecure Admin
+- Telnet, FTP, RLogin / Rsh
+- Show wireshark capture of FTP/Telnet password.
+
+### Secure Admin
+- [SSH](https://www.youtube.com/watch?v=_HBOM7Zq61E)
+- Show encrypted wireshark capture
 
 ##Tuesday Afternoon
 ###Networking
