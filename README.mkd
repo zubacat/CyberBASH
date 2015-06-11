@@ -26,15 +26,15 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 
 ##Monday Morning
 - Welcome and Intro
-  - Teacher, Staff, and Intern
+  - Teachers, Staff, and Interns
   - Student
     - Name
     - Grade
     - School
     - What you want to Learn at CSC 2.0
 - [Pre Class Survey](https://docs.google.com/forms/d/1VtP-kvhPFHNdI_1Cq4iaL6KvBECw6ELLojxanqi_wFA/viewform)
-- STEM careers
-- Ice Breaker
+- STEM careers (Helen Rico)
+- Ice Breaker (GI provided)
 - Intro to Virtual Machines
   - [Why Virtualize?](https://www.youtube.com/watch?v=N4buO79A22w)
   - Setup  VBox
@@ -65,21 +65,27 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
   - grep
   - man
 
-- Take a Break
 - [Linux File System](https://www.youtube.com/watch?v=2qQTXp4rBEE)
 - [Sudo] (https://www.youtube.com/watch?v=imnEUvvDxc4)
 
-##Tuesday Morning
+##Tuesday
 ### Administration
 - Users/Groups
-  - adduser
-  - deluser
-  - Where are users listed?
+  - [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
+  - Exercise - Add your partner to your machine
+    - username = name pw=123456789; login -> passwd
+  - Partner Exercise - How do you delete a user?
   - lastlog
 - Passwords
 - Permissions
 
-###Remote Administration
+###Installing Software/Packages
+- [apt-get](https://www.youtube.com/watch?v=p0k6Ok-Xuqw)
+- Update & Upgrade
+- Install & Unistall
+- Look at all Packages in Ubuntu Software Manager
+
+###[Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)
 ###Insecure Admin
 - Telnet, FTP, RLogin / Rsh
 - Show wireshark capture of FTP/Telnet password.
@@ -88,12 +94,10 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - [SSH](https://www.youtube.com/watch?v=_HBOM7Zq61E)
 - Show encrypted wireshark capture
 
-##Tuesday Afternoon
 ###Networking
 - ifconfig
 - IP addresses, ports
 - SSH (keys, X-forward)
-- Wireshark
 
 Mini-Competition: SSH into other people's machines and try to shutdown their machine or whatever you want.
 
