@@ -24,7 +24,7 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 
 #Outline
 
-##Monday Morning
+##Monday 
 - Welcome and Intro
   - Teachers, Staff, and Interns
   - Student
@@ -45,7 +45,6 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
   - CLONE after a sucessful install!
 
 
-##Monday Afternoon
 ###Intro to Linux
 - What happens when you press Power -  [Boot Process](https://www.youtube.com/watch?v=ZtVpz5VWjAs)
 - Shell / Terminal / CLI / [BASH](https://www.youtube.com/watch?v=NjSgH-hcsbg)
@@ -93,11 +92,11 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 ### Secure Admin
 - [SSH](https://www.youtube.com/watch?v=_HBOM7Zq61E)
 - Show encrypted wireshark capture
+- [SSH Keys] (https://www.youtube.com/watch?v=EuIYabZS3ow)
 
 ###Networking
 - ifconfig
 - IP addresses, ports
-- SSH (keys, X-forward)
 
 Mini-Competition: SSH into other people's machines and try to shutdown their machine or whatever you want.
 
