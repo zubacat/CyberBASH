@@ -95,8 +95,8 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - [SSH Keys] (https://www.youtube.com/watch?v=EuIYabZS3ow)
 
 ###Networking
-- ifconfig
-- IP addresses, ports
+- [IP Addresses & Ports](https://prezi.com/fsimxld9ypti/ip-addresses-ports/)
+  - ifconfig
 
 Mini-Competition: SSH into other people's machines and try to shutdown their machine or whatever you want.
 
