@@ -34,7 +34,8 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
     - What you want to Learn at CSC 2.0
 - [Pre Class Survey](https://docs.google.com/forms/d/1VtP-kvhPFHNdI_1Cq4iaL6KvBECw6ELLojxanqi_wFA/viewform)
 - STEM careers (Helen Rico)
-- Ice Breaker (GI provided)
+- Ice Breaker (GI provided)A
+- [Malware](https://www.youtube.com/watch?v=afzkoB_lYNk)
 - Intro to Virtual Machines
   - [Why Virtualize?](https://www.youtube.com/watch?v=N4buO79A22w)
   - Setup  VBox
@@ -73,6 +74,7 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
   - [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
   - Exercise - Add your partner to your machine
     - username = name pw=123456789; login -> passwd
+  - How can you see they are on your machine?
   - Partner Exercise - How do you delete a user?
   - lastlog
 - Passwords
@@ -100,7 +102,7 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 
 Mini-Competition: SSH into other people's machines and try to shutdown their machine or whatever you want.
 
-##Wednesday Morning
+##Wednesday 
 ###Firewalls / Mini-scripting
 - UFW
 - Scripting
@@ -108,7 +110,6 @@ Mini-Competition: SSH into other people's machines and try to shutdown their mac
 - alias
 - chattr
 
-##Wednesday Afternoon
 ###SSH config
 - etc/ssh/sshd\_config
 - Banner
