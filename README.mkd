@@ -51,14 +51,12 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - Shell / Terminal / CLI / [BASH](https://www.youtube.com/watch?v=NjSgH-hcsbg)
 - Explain layout of Terminal 
 - Basic Commands - Each Group choose 2 commands to research.
-  - who
   - ls
   - cd
   - whoami
+  - alias
   - pwd
   - cat
-  - kill
-  - ps
   - cp
   - mv
   - rm
@@ -68,17 +66,11 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - [Linux File System](https://www.youtube.com/watch?v=2qQTXp4rBEE)
 - [Sudo] (https://www.youtube.com/watch?v=imnEUvvDxc4)
 
-##Tuesday
-### Administration
-- Users/Groups
-  - [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
-  - Exercise - Add your partner to your machine
-    - username = name pw=123456789; login -> passwd
-  - How can you see they are on your machine?
-  - Partner Exercise - How do you delete a user?
-  - lastlog
-- Passwords
-- Permissions
+###Detecting Malware
+- ps
+- kill
+
+##Tuesday - Administration
 
 ###Installing Software/Packages
 - [apt-get](https://www.youtube.com/watch?v=p0k6Ok-Xuqw)
@@ -86,7 +78,20 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - Install & Unistall
 - Look at all Packages in Ubuntu Software Manager
 
+###Users/Groups
+- [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
+- Exercise - Add your partner to your machine
+  - username = name pw=123456789; login -> passwd
+  - Exercise - How do you add, then delete a user?
+- Passwords
+- Permissions
+
+###Networking
+- [IP Addresses & Ports](https://prezi.com/fsimxld9ypti/ip-addresses-ports/)
+  - ifconfig
+
 ###[Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)
+
 ###Insecure Admin
 - Telnet, FTP, RLogin / Rsh
 - Show wireshark capture of FTP/Telnet password.
@@ -95,26 +100,51 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - [SSH](https://www.youtube.com/watch?v=_HBOM7Zq61E)
 - Show encrypted wireshark capture
 - [SSH Keys] (https://www.youtube.com/watch?v=EuIYabZS3ow)
+- Use locks to help explain keys
+- SSH into partner's machine with previously created account.
 
-###Networking
-- [IP Addresses & Ports](https://prezi.com/fsimxld9ypti/ip-addresses-ports/)
-  - ifconfig
+###Detection
+How to detect if someone is on your machine?
+- w - maybe the most useful command you will learn
+- Who
+- What is 'lastlog'?
 
-Mini-Competition: SSH into other people's machines and try to shutdown their machine or whatever you want.
+###Kicking People out
+- reboot
+- kill #
+  - ps -e
+- pkill -KILL/STOP -u username
 
-##Wednesday 
-###Firewalls / Mini-scripting
-- UFW
-- Scripting
-- cron
-- alias
-- chattr
+### Mini-Competiton
+
+##Wednesday - Keeping People Out
+
+###Firewalls
+- iptables
+- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
+- Practice Exersise Later
+
+###Users
+- Lock account - passwd -l username
+- deluser
+
+###Other
+- VPN
+- Keys only
+- Sandboxing
+- Restricted Root / Sudo - visudo
+- "Anti-virus"
+- pam\_tally2
+
+
 
 ###SSH config
 - etc/ssh/sshd\_config
 - Banner
 - Logging Fails
 
+- cron
+- chattr
 Mini-Competition: SSH into others' box knowing the username/password, keeping others out with Firewalls/sshd config only.
 ##Thursday Morning
 ###Apache Config
