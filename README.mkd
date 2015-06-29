@@ -115,8 +115,7 @@ How to detect if someone is on your machine?
 
 ###Kicking People out
 - reboot
-- kill #
-  - ps -e
+- kill 
 - pkill -KILL/STOP -u username
 
 ### Mini-Competiton
@@ -159,6 +158,7 @@ How to detect if someone is on your machine?
 - start, stop, restart
 - /etc/init.d
 
+### Mini-Competiton
 Mini-Competition: SSH into others' box knowing the username/password, keeping others out with Firewalls/sshd config only.
 
 ##Thursday 
@@ -182,4 +182,11 @@ Mini-Competition: SSH into others' box knowing the username/password, keeping ot
 
 
 ##Friday
-Red vs Blue Competition. 
+###Red vs Blue Competition 
+
+- 9:00 [Post-Class Knowledge Survey](https://docs.google.com/forms/d/1VtP-kvhPFHNdI_1Cq4iaL6KvBECw6ELLojxanqi_wFA/viewform)
+- 9:15 - Final Review - Any Last Questions 
+- 9:30 - Start R v B Competition
+- 11:15 - End Comp - Debrief from Red Team  
+- 11:30 - Each Group Debriefs what they have learned ~5mins/group
+- 12:00 - Closing remarks to parents/students
