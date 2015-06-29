@@ -1,4 +1,0 @@
-# Friday
-
-## Competition
-- Group vs group with the red team 'attacking' blue computers.

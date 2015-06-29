@@ -48,8 +48,9 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 
 ###Intro to Linux
 - What happens when you press Power -  [Boot Process](https://www.youtube.com/watch?v=ZtVpz5VWjAs)
-- Shell / Terminal / CLI / [BASH](https://www.youtube.com/watch?v=NjSgH-hcsbg)
+- Shell / Terminal / CLI / [BASH](https://www.youtube.com/watch?v=x73WTEltyHU)
 - Explain layout of Terminal 
+- [Commands + Options](https://www.youtube.com/watch?v=q7-aEspwwEI)
 - Basic Commands - Each Group choose 2 commands to research.
   - ls
   - cd
@@ -60,6 +61,7 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
   - cp
   - mv
   - rm
+  - mkdir
   - grep
   - man
 
@@ -71,6 +73,8 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - kill
 
 ##Tuesday - Administration
+
+###Review of Yesterday
 
 ###Installing Software/Packages
 - [apt-get](https://www.youtube.com/watch?v=p0k6Ok-Xuqw)
@@ -119,6 +123,8 @@ How to detect if someone is on your machine?
 
 ##Wednesday - Keeping People Out
 
+###Review of Yesterday
+
 ###Firewalls
 - iptables
 - [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
@@ -135,24 +141,45 @@ How to detect if someone is on your machine?
 - Restricted Root / Sudo - visudo
 - "Anti-virus"
 - pam\_tally2
+- SELinux
 
-
+###Competition Scoring Points!
 
 ###SSH config
 - etc/ssh/sshd\_config
-- Banner
-- Logging Fails
+- Banner - /etc/issue.net
+- Logging Fails - /var/log/auth.log
 
-- cron
-- chattr
+###[Apache](https://www.youtube.com/watch?v=fRLJ3bnbHmE)
+- Configuring Apache - httpd.conf
+- Making your webpage - /var/www/html/index.html
+- Intro to HTML / Website making (If time, else tomorrow!)
+
+###Services
+- start, stop, restart
+- /etc/init.d
+
 Mini-Competition: SSH into others' box knowing the username/password, keeping others out with Firewalls/sshd config only.
-##Thursday Morning
-###Apache Config
-- Configuring Apache
-- Intro to HTML / Website making
-- What they want to learn
 
-##Thursday Afternoon
-Dry Run of Competition. Student Groups vs other Student Groups.
+##Thursday 
+
+###Review of Yesterday
+
+###Intro to Scipts
+- setSSHBanner.sh
+- setHTML.sh
+- getFailLog.sh
+- Others?
+  - UFW
+  - Logout users
+  - Only see SSH logging fails 
+
+###Misc
+- [cron] (https://www.youtube.com/watch?v=hGqjM9Wz-pU)
+  - Start at 22:25 
+- chattr
+  - lsattr
+
+
 ##Friday
 Red vs Blue Competition. 
