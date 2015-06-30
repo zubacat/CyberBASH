@@ -63,6 +63,7 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
   - rm
   - mkdir
   - grep
+  - history
   - man
 
 - [Linux File System](https://www.youtube.com/watch?v=2qQTXp4rBEE)
