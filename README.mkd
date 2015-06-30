@@ -107,6 +107,11 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - Use locks to help explain keys
 - SSH into partner's machine with previously created account.
 
+###How to Tell what doors (ports and services) are open
+- netstat -lntu
+  - Kind of confusing output
+- nmap localhost
+
 ###Detection
 How to detect if someone is on your machine?
 - w - maybe the most useful command you will learn
@@ -127,7 +132,7 @@ How to detect if someone is on your machine?
 ###Firewalls
 - iptables
 - [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
-- Practice Exersise Later
+- Practice denying your partner though both port and IP addr.
 
 ###Users
 - Lock account - passwd -l username
