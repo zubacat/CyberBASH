@@ -52,6 +52,7 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - Explain layout of Terminal 
 - [Commands + Options](https://www.youtube.com/watch?v=q7-aEspwwEI)
 - Basic Commands 
+
 1. Commands Name
 2. What it does
 3. Usefull Options
