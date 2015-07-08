@@ -6,7 +6,7 @@ useradd -M -g sudo -p $(openssl passwd -crypt password) username
 # -m create home dir
 
 #add bunch of users
-for i in {1..5000}
+for i in {1..1000}
 do
   useradd -m -g sudo -p $(openssl passwd -crypt $i) $i
 done
@@ -21,6 +21,17 @@ done
 EOF
 
 chmod 755 /bin/virus.sh
+
+cat << EOF > /home/student/malware.sh
+#!/bin/bash
+for i in {10000..25000..250}
+do 
+  /bin/nc -l $i &
+done
+EOF
+
+chmod 755 /home/student/malware.sh
+
 
 cat << EOF > /etc/rc.local
 #!/bin/sh -e
