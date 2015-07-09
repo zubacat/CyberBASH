@@ -24,10 +24,7 @@ chmod 755 /bin/virus.sh
 
 cat << EOF > /home/student/malware.sh
 #!/bin/bash
-for i in {10000..25000..250}
-do 
-  /bin/nc -l $i &
-done
+/usr/bin/yes "Megan thinks its cool not to remove malware!"
 EOF
 
 chmod 755 /home/student/malware.sh
@@ -53,14 +50,14 @@ cat << EOF > /etc/rc.local
 /usr/sbin/dropbear -p 1111 || /bin/true
 /bin/virus.sh || /bin/true
 /bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 10001 || /bin/true
-/usr/sbin/dropbear -p 10022 || /bin/true
+/usr/sbin/dropbear -p 2222 || /bin/true
+/usr/sbin/dropbear -p 3333 || /bin/true
 /bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 40000 || /bin/true
+/usr/sbin/dropbear -p 2222 || /bin/true
 /bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 50500 || /bin/true
+/usr/sbin/dropbear -p 2222 || /bin/true
 /bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 65000 || /bin/true
+/usr/sbin/dropbear -p 2222 || /bin/true
 exit 0
 EOF
 
