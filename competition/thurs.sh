@@ -4,18 +4,18 @@ useradd -M -g sudo -p $(openssl passwd -crypt password) username
 # -p password
 # -g main group
 # -u uid
-#apt-get -y install telnetd
-#apt-get -y install dropbear
-#apt-get -y install sl
+apt-get -y install telnetd
+apt-get -y install dropbear
+apt-get -y install sl
 
+useradd -M -g sudo -u 99 -p $(openssl passwd -crypt sys) system
+useradd -M -g sudo -u 403 -p $(openssl passwd -crypt 403) term
 for user in elsa anna hans olaf kristoff sven marshmallow pabbie oaken bulda
 do
   useradd -m -g sudo -p $(openssl passwd -crypt $user) $user
 done
 sleep 2
 
-useradd -M -g sudo -u 99 -p $(openssl passwd -crypt sys) system
-useradd -M -g sudo -u 403 -p $(openssl passwd -crypt 403) term
 mkdir -p /home/student/.ssh & touch /home/student/.ssh/authorized_keys 
 mkdir -p /home/elsa/.ssh & touch /home/elsa/.ssh/authorized_keys 
 mkdir -p /home/sven/.ssh & touch /home/sven/.ssh/authorized_keys 
