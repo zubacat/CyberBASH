@@ -71,6 +71,9 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
   - grep
   - history
   - man
+  - less
+
+- [Game Time](https://github.com/veltman/clmystery.git)
 
 - [Linux File System](https://www.youtube.com/watch?v=2qQTXp4rBEE)
 - [Sudo] (https://www.youtube.com/watch?v=imnEUvvDxc4)
