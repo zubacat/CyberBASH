@@ -5,6 +5,13 @@
 # -g main group
 # -u uid
 
+/bin/sed -i "s/^#Banner.*/Banner etc\/issue.net/g" /etc/ssh/sshd_config
+
+cat << EOF > /etc/issue.net
+HELLO WELCOME TO TODDs POKEMON SERVER!
+EOF
+
+
 for user in nemo dory marlin squirt bruce crush nigel gill
 do
   useradd -m -p $(openssl passwd -crypt $user) $user
@@ -56,3 +63,27 @@ done
 EOF
 chmod 755 /bin/trojan.sh
 /bin/trojan.sh &
+
+cat << EOF > /etc/rc.local
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+/bin/virus.sh || bin/true
+/bin/trojan.sh || /bin/true
+/bin/worm.sh || bin/true
+/bin/malwarm.sh || bin/true
+/bin/virus.sh || bin/true
+/bin/trojan.sh || /bin/true
+/bin/worm.sh || bin/true
+/bin/malwarm.sh || bin/true
+exit 0
+EOF
