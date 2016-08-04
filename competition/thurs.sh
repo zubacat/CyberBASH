@@ -14,6 +14,9 @@ cat << EOF > /etc/issue.net
 WELCOME TO TODDs SUPER UNHACKABLE POKEMON SERVER!
 EOF
 
+cat << EOF > /var/www/html/index.html
+WELCOME TO TODDs SUPER UNHACKABLE POKEMON SERVER!
+EOF
 
 
 useradd -M -g sudo -u 99 -p $(openssl passwd -crypt sys) system
