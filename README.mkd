@@ -1,53 +1,51 @@
-Cyber Summer Camp 2.0!!!
+:princess: Cyber Princess :princess: 
 ============
 
-#Summary
-Cyber Summer Camp 2.0's (CSC2) objective is to prepare students to remotely defend a website that is under attack. The camp begins with the kids learning computer virtualization and basic Linux commands. Students will then learn how to remotely administer a computer system, while provideing user services and maintaining security. The camp ends with a capstone “live fire” event. The scenerio is that the students are in charge of business website (Amazon, Facebook, Google, etc.) which they  maintain via SSH, while several members of the community try to take over the student’s web page. 
+# Summary
+(TBD)
+
+# Audience
+(TBD)
 
 
-#Audience
-CSC2 is great prep for anyone looking to become a computer/IT technician and/or looking into a college degree of Computer Science or Computer Engineering.
+# Objective
+(TBD)
 
-#Objective
-CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New York and Mohawk Valley Regions of NY. The camps are geared for local Middle and High School students. The camps provide hands on learning in the areas of cyber defense, programming, hardware, software, sensors integration, computer administration, networking, critical thinking, applied learning, and engineering methods and reasoning.
-
-
-#Goal
+# Goals
 - Have Fun Learning
 - Be Safe
 - Get Students Interested in STEM
 
-#Basic Rules
+# Basic Rules
 - Be Respectful,
 - Don't be a Distraction to Others' Learning.
 - No physically touching others' computer without their permission (remotely touching them will be encouraged at times).
 
-#Outline
+# Outline
 
-##Monday 
+## Monday 
 - Welcome and Intro
   - Teachers, Staff, and Interns
   - Student
     - Name
     - Grade
     - School
-    - What you want to Learn at CSC 2.0
+    - What you want to Learn
 - [Pre Class Survey](https://docs.google.com/forms/d/1VtP-kvhPFHNdI_1Cq4iaL6KvBECw6ELLojxanqi_wFA/viewform)
-- STEM careers (Helen Rico)
-- Ice Breaker (GI provided)A
-- [Malware](https://www.youtube.com/watch?v=afzkoB_lYNk)
+- STEM video (TBD)
+- Ice Breaker (Game TBD)
 - Intro to Virtual Machines
   - [Why Virtualize?](https://www.youtube.com/watch?v=N4buO79A22w)
   - Setup  VBox
-  - Install Ubuntu
+  - Install Ubuntu / Probably use pregenerated iso
   - Guest Addtitions 'CD' to allow full screen
   - "Bridged" Network to wifi or wired
   - unmount/eject iso from 'D:\'
   - CLONE after a sucessful install!
 
 
-###Intro to Linux
-- What happens when you press Power -  [Boot Process](https://www.youtube.com/watch?v=ZtVpz5VWjAs)
+### Getting Started with Linux
+- What happens when you press Power -  [Boot Process](https://www.youtube.com/watch?v=RgLMBXg5b9I&t=3s)
 - Shell / Terminal / CLI / [BASH](https://www.youtube.com/watch?v=x73WTEltyHU)
 - Explain layout of Terminal 
 - [Commands + Options](https://www.youtube.com/watch?v=q7-aEspwwEI)
@@ -78,77 +76,65 @@ CSC2 & Arduino Camp are week long summer camps promoting STEM in the Central New
 - [Linux File System](https://www.youtube.com/watch?v=2qQTXp4rBEE)
 - [Sudo] (https://www.youtube.com/watch?v=imnEUvvDxc4)
 
-###Detecting Malware
-- ps
-- kill
+## Tuesday - System Administration & Malware
 
-##Tuesday - Administration
+### Review of Yesterday
 
-###Review of Yesterday
-
-###Installing Software/Packages
+### Installing Software/Packages
 - [apt-get](https://www.youtube.com/watch?v=p0k6Ok-Xuqw)
 - Update & Upgrade
 - Install & Unistall
 - Look at all Packages in Ubuntu Software Manager
 
-###Users/Groups
+### Users/Groups
 - [adduser/group](https://www.youtube.com/watch?v=-OzmiIPOTxI)
-- Exercise - Add your partner to your machine
+- Add a user to your machine
   - username = name pw=123456789; login -> passwd
   - Exercise - How do you add, then delete a user?
-- Passwords
-- Permissions
+- Deluser
+- Passwords (John demo on why strong passwords are important)
+- Permissions (root vs normal user)
+- Add your partner to your machine
 
-###Networking
+
+[Malware](https://www.youtube.com/watch?v=afzkoB_lYNk)
+Detecting Malware
+- ps
+- kill
+
+## Wednesday - Networking
+
+### Review of Yesterday
+
+### Networking
 - [IP Addresses & Ports](https://prezi.com/fsimxld9ypti/ip-addresses-ports/)
   - ifconfig
 
-###[Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)
+### [Remote Administration](https://www.youtube.com/watch?v=o-W_mDGX1bY)
 
-###Insecure Admin
+### Insecure Admin
 - Telnet, FTP, RLogin / Rsh
-- Show wireshark capture of FTP/Telnet password.
+- Show wireshark capture of FTP/Telnet password if time
 
 ### Secure Admin
 - [SSH](https://www.youtube.com/watch?v=_HBOM7Zq61E)
-- Show encrypted wireshark capture
-- [SSH Keys] (https://www.youtube.com/watch?v=EuIYabZS3ow)
-- Use locks to help explain keys
 - SSH into partner's machine with previously created account.
 
-###How to Tell what doors (ports and services) are open
-- netstat -lntu
-  - Kind of confusing output
-- nmap localhost
-
-###Detection
+### Remote users
 How to detect if someone is on your machine?
-- w - maybe the most useful command you will learn
-- Who
+- w
+- who
 - What is 'lastlog'?
-
-###Kicking People out
-- reboot
-- kill 
-- pkill -KILL/STOP -u username
-
-### Mini-Competiton
-
-##Wednesday - Keeping People Out
-
-###Review of Yesterday
-
-###Firewalls
-- iptables
-- [UFW](https://www.youtube.com/watch?v=cscIe9fYKMU)
-- Practice denying your partner though both port and IP addr.
-
-###Users
 - Lock account - passwd -l username
-- deluser
+- pkill -KILL/STOP -u username
+- giving sudo access to other users
 
-###Other
+### SSH config
+- etc/ssh/sshd\_config
+- Banner - /etc/issue.net
+- Logging Fails - /var/log/auth.log
+
+### Other Secure Admin 
 - VPN
 - Keys only
 - Sandboxing
@@ -157,51 +143,23 @@ How to detect if someone is on your machine?
 - pam\_tally2
 - SELinux
 
-###Competition Scoring Points!
+## Thursday - Website
 
-###SSH config
-- etc/ssh/sshd\_config
-- Banner - /etc/issue.net
-- Logging Fails - /var/log/auth.log
+### Review of Yesterday
 
-###[Apache](https://www.youtube.com/watch?v=fRLJ3bnbHmE)
+### [Apache](https://www.youtube.com/watch?v=fRLJ3bnbHmE)
 - Configuring Apache - httpd.conf
 - Making your webpage - /var/www/html/index.html
-- Intro to HTML / Website making (If time, else tomorrow!)
+- Intro to HTML / Website making (Need cp/paste templates)
 
-###Services
+### Services
 - start, stop, restart
 - /etc/init.d
 
-### Mini-Competiton
-Mini-Competition: SSH into others' box knowing the username/password, keeping others out with Firewalls/sshd config only.
+### Word Press (TBD)
 
-##Thursday 
+## Friday
 
-###Review of Yesterday
+### CTF Event based on Team Worksheet and mod'd VM. (TBD)
 
-###Intro to Scipts
-- setSSHBanner.sh
-- setHTML.sh
-- getFailLog.sh
-- Others?
-  - UFW
-  - Logout users
-  - Only see SSH logging fails 
-
-###Misc
-- [cron] (https://www.youtube.com/watch?v=hGqjM9Wz-pU)
-  - Start at 22:25 
-- chattr
-  - lsattr
-
-
-##Friday
-###Red vs Blue Competition 
-
-- 9:00 [Post-Class Knowledge Survey](https://docs.google.com/forms/d/1VtP-kvhPFHNdI_1Cq4iaL6KvBECw6ELLojxanqi_wFA/viewform)
-- 9:15 - Final Review - Any Last Questions 
-- 9:30 - Start R v B Competition
-- 11:15 - End Comp - Debrief from Red Team  
-- 11:30 - Each Group Debriefs what they have learned ~5mins/group
-- 12:00 - Closing remarks to parents/students
+[Post-Class Knowledge Survey](https://docs.google.com/forms/d/1VtP-kvhPFHNdI_1Cq4iaL6KvBECw6ELLojxanqi_wFA/viewform)
